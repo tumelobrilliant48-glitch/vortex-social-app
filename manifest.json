@@ -1,10 +1,10 @@
 {
-  "name": "VORTEX - 2M Social by Brilliant T Mere",
-  "short_name": "VORTEX",
-  "description": "Botswana's social network - Built in Gabs 2026",
+  "name": "VORTEX LUX - 2M Social by Brilliant T Mere",
+  "short_name": "VORTEX LUX",
+  "description": "Botswana's Luxury Social Network - Built in Gaborone 2026 by Brilliant T Mere 🇧🇼",
   "start_url": "/vortex-social-app/",
   "display": "standalone",
-  "background_color": "#000000",
+  "background_color": "#050507",
   "theme_color": "#a855f7",
   "orientation": "portrait",
   "icons": [
