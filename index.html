@@ -1,107 +1,50 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>VORTEX - 2M Social</title>
-<link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+<meta name="theme-color" content="#7c3aed">
+<link rel="manifest" href="manifest.json">
+<link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;600;800&family=Material+Icons" rel="stylesheet">
+<title>VORTEX 2M - Luxurious</title>
 <style>
-*{margin:0;padding:0;box-sizing:border-box;font-family:sans-serif}
-body{background:#000;color:#fff}
-.header{position:sticky;top:0;background:#000;border-bottom:1px solid #222;padding:12px 15px;display:flex;justify-content:space-between;align-items:center;z-index:10}
-.logo{font-weight:900;font-size:20px;background:linear-gradient(90deg,#a855f7,#ec4899);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
-.creator{font-size:10px;color:#a855f7;letter-spacing:1px}
-.header-icons{display:flex;gap:15px}
-.post-box{padding:15px;border-bottom:8px solid #111;display:flex;gap:10px}
-.avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(45deg,#a855f7,#ec4899);display:flex;align-items:center;justify-content:center;font-weight:bold}
-.post-input{flex:1;background:#16181c;border:1px solid #222;border-radius:20px;padding:12px 15px;color:#fff;width:100%;outline:none}
-.feed-post{padding:15px;border-bottom:1px solid #222}
-.post-header{display:flex;gap:10px;margin-bottom:10px;align-items:center}
-.post-user{font-weight:bold;font-size:15px}
-.post-time{color:#71767b;font-size:13px}
-.post-text{margin-left:50px;margin-bottom:12px;line-height:1.4}
-.post-actions{margin-left:50px;display:flex;justify-content:space-between;max-width:300px}
-.action{display:flex;align-items:center;gap:5px;color:#71767b;font-size:13px;cursor:pointer}
-.action i{font-size:18px}
-.action.liked{color:#f91880}
-.bottom-nav{position:fixed;bottom:0;left:0;right:0;background:#000;border-top:1px solid #222;display:flex;justify-content:space-around;padding:10px 0}
-.nav-item{display:flex;flex-direction:column;align-items:center;color:#fff;cursor:pointer}
-.nav-item.active{color:#a855f7}
-.nav-item i{font-size:26px}
-.btn-post{width:100%;background:linear-gradient(90deg,#a855f7,#ec4899);border:none;color:#fff;padding:12px;border-radius:25px;font-weight:bold;margin-top:10px}
+*{margin:0;padding:0;box-sizing:border-box;font-family:'Outfit',sans-serif}
+body{background:#050507;color:#fff;overflow-x:hidden;padding-bottom:80px}
+.topbar{position:sticky;top:0;z-index:100;background:rgba(5,5,7,0.85);backdrop-filter:blur(20px);border-bottom:1px solid #1a1a1e;padding:14px 18px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:800;font-size:22px;letter-spacing:2px;background:linear-gradient(90deg,#a855f7,#ec4899,#f59e0b);-webkit-background-clip:text;-webkit-text-fill-color:transparent}
+.sub{font-size:9px;letter-spacing:3px;color:#a855f7;opacity:.8}
+.stories{display:flex;gap:14px;overflow-x:auto;padding:16px 18px;border-bottom:1px solid #15151a;scrollbar-width:none}
+.stories::-webkit-scrollbar{display:none}
+.story{display:flex;flex-direction:column;align-items:center;gap:6px;min-width:62px}
+.ring{width:62px;height:62px;border-radius:50%;padding:2px;background:linear-gradient(45deg,#a855f7,#ec4899,#f59e0b)}
+.ring-inner{width:100%;height:100%;border-radius:50%;background:#101012;display:flex;align-items:center;justify-content:center;font-weight:800;border:2px solid #000}
+.story span{font-size:11px;color:#9ca3af}
+.composer{padding:18px;display:flex;gap:12px;border-bottom:8px solid #0d0d0f}
+.avatar{width:44px;height:44px;border-radius:50%;background:linear-gradient(135deg,#a855f7,#ec4899);display:flex;align-items:center;justify-content:center;font-weight:800;flex-shrink:0}
+.input-area{flex:1}
+.textarea{width:100%;background:#141418;border:1px solid #23232a;border-radius:18px;padding:14px 16px;color:#fff;font-size:15px;outline:none;resize:none;min-height:48px}
+.post-btn{margin-top:10px;width:100%;background:linear-gradient(90deg,#a855f7,#ec4899);border:none;padding:13px;border-radius:999px;color:#fff;font-weight:700;letter-spacing:1px;cursor:pointer;box-shadow:0 8px 24px rgba(168,85,247,0.3)}
+.feed-post{padding:18px;border-bottom:1px solid #15151a}
+.post-head{display:flex;gap:12px;align-items:center}
+.name{font-weight:600;font-size:14px;display:flex;gap:6px;align-items:center}
+.handle{color:#6b7280;font-size:12px}
+.verified{width:16px;height:16px;background:#a855f7;border-radius:50%;display:inline-flex;align-items:center;justify-content:center;font-size:10px}
+.post-text{margin:12px 0 12px 56px;font-size:15px;line-height:1.5;color:#e5e7eb}
+.actions{margin:14px 0 0 56px;display:flex;justify-content:space-between;max-width:320px}
+.act{display:flex;align-items:center;gap:6px;color:#6b7280;font-size:13px;cursor:pointer}
+.act.active{color:#ec4899}
+.act i{font-size:20px}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:rgba(5,5,7,0.9);backdrop-filter:blur(24px);border-top:1px solid #1a1a1e;display:flex;justify-content:space-around;padding:12px 0 18px;z-index:100}
+.nav{color:#4b5563;cursor:pointer;display:flex;flex-direction:column;align-items:center}
+.nav.active{color:#fff}
+.nav i{font-size:28px}
+.dot{position:absolute;top:-2px;right:-2px;width:8px;height:8px;background:#ec4899;border-radius:50%}
 </style>
 </head>
 <body>
-
-<div class="header">
-  <div>
-    <div class="logo">VORTEX • 2M</div>
-    <div class="creator">BY BRILLIANT T MERE • BUILT IN GABS 2026</div>
-  </div>
-  <div class="header-icons">
-    <i class="material-icons">search</i>
-    <i class="material-icons">settings</i>
-  </div>
+<div class="topbar">
+  <div><div class="logo">VORTEX</div><div class="sub">2M SOCIAL • BRILLIANT T MERE • GABORONE BW</div></div>
+  <div style="display:flex;gap:18px"><i class="material-icons">notifications</i><i class="material-icons">send</i></div>
 </div>
-
-<div class="post-box">
-  <div class="avatar">B</div>
-  <div style="flex:1">
-    <input id="newPost" class="post-input" placeholder="What's happening in Gabs today, Brilliant?">
-    <button class="btn-post" onclick="addPost()">POST TO VORTEX</button>
-  </div>
-</div>
-
-<div id="feed">
-  <div class="feed-post">
-    <div class="post-header">
-      <div class="avatar">V</div>
-      <div><div class="post-user">VORTEX Official ✓</div><div class="post-time">Built in Gabs • Now</div></div>
-    </div>
-    <div class="post-text">Welcome to VORTEX v3.0! The first social app built 100% on a phone in Gaborone! 🇧🇼🔥 Post something below!</div>
-    <div class="post-actions">
-      <div class="action" onclick="like(this)"><i class="material-icons">favorite_border</i><span>24</span></div>
-      <div class="action"><i class="material-icons">chat_bubble_outline</i><span>5</span></div>
-      <div class="action"><i class="material-icons">repeat</i><span>2</span></div>
-      <div class="action"><i class="material-icons">share</i></div>
-    </div>
-  </div>
-</div>
-
-<div class="bottom-nav">
-  <div class="nav-item active"><i class="material-icons">home</i></div>
-  <div class="nav-item"><i class="material-icons">search</i></div>
-  <div class="nav-item"><i class="material-icons">add_box</i></div>
-  <div class="nav-item"><i class="material-icons">favorite_border</i></div>
-  <div class="nav-item"><i class="material-icons">person_outline</i></div>
-</div>
-
-<script>
-let posts = JSON.parse(localStorage.getItem('vortex_posts')||'[]');
-function render(){
-  let feed = document.getElementById('feed');
-  let html = feed.innerHTML;
-  // keep official post
-  let official = html;
-  posts.forEach(p=>{
-    official = `<div class="feed-post"><div class="post-header"><div class="avatar">B</div><div><div class="post-user">Brilliant T Mere</div><div class="post-time">Just now</div></div></div><div class="post-text">${p}</div><div class="post-actions"><div class="action" onclick="like(this)"><i class="material-icons">favorite_border</i><span>0</span></div><div class="action"><i class="material-icons">chat_bubble_outline</i><span>0</span></div><div class="action"><i class="material-icons">repeat</i><span>0</span></div><div class="action"><i class="material-icons">share</i></div></div></div>` + official;
-  });
-  feed.innerHTML = official;
-}
-function addPost(){
-  let input = document.getElementById('newPost');
-  if(!input.value) return;
-  posts.unshift(input.value);
-  localStorage.setItem('vortex_posts', JSON.stringify(posts));
-  input.value='';
-  location.reload();
-}
-function like(el){
-  el.classList.toggle('liked');
-  let icon = el.querySelector('i');
-  icon.textContent = el.classList.contains('liked') ? 'favorite' : 'favorite_border';
-}
-render();
-</script>
-</body>
-</html>
+<div class="stories">
+  <div
