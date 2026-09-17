@@ -1,57 +1,132 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-<meta charset="UTF-8">
-<meta name="viewport" content="width=device-width,initial-scale=1">
-<meta name="theme-color" content="#00d4ff">
-<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@600;800&family=Outfit:wght@400;600&family=Material+Icons" rel="stylesheet">
-<title>VORTEX - Neon by Brilliant</title>
+<!DOCTYPE html><html lang="en"><head><meta charset="UTF-8"><meta name="viewport" content="width=device-width,initial-scale=1,maximum-scale=1"><meta name="theme-color" content="#00d4ff">
+<link href="https://fonts.googleapis.com/css2?family=Orbitron:wght@700;800&family=Outfit:wght@300;400;600;800&family=Material+Icons" rel="stylesheet">
+<title>VORTEX 100K NEON</title>
 <style>
 *{margin:0;padding:0;box-sizing:border-box;font-family:'Outfit',sans-serif}
-body{background:#020a14;color:#fff;overflow-x:hidden;padding-bottom:90px}
-@keyframes glowPulse{0%,100%{box-shadow:0 0 15px #00d4ff,0 0 30px #00d4ff40, inset 0 0 10px #00d4ff20}50%{box-shadow:0 0 25px #00d4ff,0 0 50px #00d4ff60, inset 0 0 15px #00d4ff30}}
-@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-3px)}}
-.top{display:flex;justify-content:space-between;align-items:center;padding:14px 16px;background:#020a14;border-bottom:1px solid #00d4ff30;position:sticky;top:0;z-index:100}
-.logo-wrap{display:flex;align-items:center;gap:10px}
-.v-circle{width:48px;height:48px;border-radius:50%;background:radial-gradient(circle,#0a2a4a,#020a14);border:2px solid #00d4ff;display:flex;align-items:center;justify-content:center;font-family:'Orbitron';font-weight:800;font-size:22px;color:#00d4ff;box-shadow:0 0 20px #00d4ff, inset 0 0 10px #00d4ff60;animation:glowPulse 2s infinite}
-.brand{font-family:'Orbitron';font-weight:800;font-size:20px;letter-spacing:3px;color:#00d4ff;text-shadow:0 0 10px #00d4ff}
-.brand small{display:block;font-size:7px;letter-spacing:4px;color:#00d4ff99;font-family:'Outfit'}
-.hero{margin:16px;border:1px solid #00d4ff60;border-radius:20px;padding:14px;display:flex;gap:14px;align-items:center;background:linear-gradient(135deg,#051425,#0a2342);box-shadow:0 0 25px #00d4ff30, inset 0 0 15px #00d4ff15;animation:glowPulse 3s infinite}
-.hero .v-big{width:68px;height:68px;border-radius:50%;border:2px solid #00d4ff;background:radial-gradient(circle,#0a2a4a,#020a14);display:flex;align-items:center;justify-content:center;font-family:'Orbitron';font-size:28px;font-weight:800;color:#00d4ff;box-shadow:0 0 25px #00d4ff}
-.stories{display:flex;gap:16px;overflow-x:auto;padding:14px 16px;scrollbar-width:none}
-.stories::-webkit-scrollbar{display:none}
-.story{min-width:70px;text-align:center}
-.story-ring{width:64px;height:64px;border-radius:50%;padding:2px;background:linear-gradient(45deg,#00d4ff,#00ffea);box-shadow:0 0 15px #00d4ff80}
-.story-inner{width:100%;height:100%;border-radius:50%;background:#020a14;border:2px solid #020a14;display:flex;align-items:center;justify-content:center;overflow:hidden}
-.story span{font-size:11px;margin-top:6px;display:block;color:#8bb4cc}
-.composer{margin:14px 16px;border:1.5px solid #00d4ff70;border-radius:22px;padding:14px;background:rgba(2,20,40,0.8);box-shadow:0 0 20px #00d4ff30, inset 0 0 10px #00d4ff10}
-.input-row{display:flex;gap:10px;align-items:center}
-.input-row .v-small{width:42px;height:42px;border-radius:50%;border:1.5px solid #00d4ff;display:flex;align-items:center;justify-content:center;color:#00d4ff;font-family:'Orbitron';font-weight:800;box-shadow:0 0 12px #00d4ff60}
-.input{flex:1;background:#051a30;border:1px solid #00d4ff40;border-radius:14px;padding:12px 14px;color:#fff;outline:none}
-.input::placeholder{color:#5a8aa8}
-.actions-row{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
-.btn-ghost{color:#8bb4cc;font-size:13px;display:flex;align-items:center;gap:6px}
-.btn-share{background:linear-gradient(90deg,#00d4ff,#00aaff);border:none;padding:10px 20px;border-radius:999px;color:#00111f;font-weight:700;box-shadow:0 0 15px #00d4ff;cursor:pointer}
-.tabs{display:flex;margin:16px;background:#051a30;border-radius:999px;padding:4px;border:1px solid #00d4ff30}
-.tab{flex:1;text-align:center;padding:10px;border-radius:999px;font-size:14px;font-weight:600;cursor:pointer}
-.tab.active{background:#00d4ff;color:#00111f;box-shadow:0 0 15px #00d4ff}
-.post{margin:12px 16px;border:1.5px solid #00d4ff50;border-radius:18px;padding:14px;background:rgba(5,26,48,0.7);box-shadow:0 0 15px #00d4ff20}
-.post-head{display:flex;justify-content:space-between;align-items:center}
-.post-actions{display:flex;gap:18px;margin-top:12px;color:#6b9bb5}
-.bottom{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(180deg,#020a14,#001a33);border-top:1px solid #00d4ff40;display:flex;justify-content:space-around;padding:10px 0 18px;z-index:100;box-shadow:0 -5px 20px #00d4ff20}
-.nav{color:#4a7a99;display:flex;flex-direction:column;align-items:center;font-size:11px;gap:2px}
+body{background:#010a15;color:#e6f7ff;padding-bottom:95px;overflow-x:hidden}
+@keyframes neon{0%,100%{box-shadow:0 0 12px #00d4ff,0 0 30px #00d4ff30,inset 0 0 10px #00d4ff15}50%{box-shadow:0 0 22px #00d4ff,0 0 50px #00d4ff50,inset 0 0 18px #00d4ff25}}
+@keyframes float{0%,100%{transform:translateY(0)}50%{transform:translateY(-4px)}}
+.v{width:44px;height:44px;border-radius:50%;border:2px solid #00d4ff;display:flex;align-items:center;justify-content:center;color:#00d4ff;font-family:'Orbitron';font-weight:800;box-shadow:0 0 15px #00d4ff;animation:neon 2s infinite}
+.card{margin:10px 14px;border:1.5px solid #00d4ff55;border-radius:20px;padding:14px;background:linear-gradient(135deg,rgba(5,26,48,0.9),rgba(2,15,30,0.9));box-shadow:0 0 18px #00d4ff15;backdrop-filter:blur(10px);animation:neon 4s infinite}
+.top{position:sticky;top:0;z-index:100;background:rgba(1,10,21,0.95);backdrop-filter:blur(12px);border-bottom:1px solid #00d4ff30;display:flex;justify-content:space-between;align-items:center;padding:12px 14px}
+.hero{margin:12px 14px;border:2px solid #00d4ff70;border-radius:22px;padding:16px;display:flex;gap:14px;align-items:center;background:linear-gradient(135deg,#051a33,#0a2a52);box-shadow:0 0 35px #00d4ff40}
+.stories{display:flex;gap:12px;overflow-x:auto;padding:10px 14px;scrollbar-width:none} .stories::-webkit-scrollbar{display:none}
+.ring{width:64px;height:64px;border-radius:50%;padding:2.5px;background:conic-gradient(#00d4ff,#00ffea,#00d4ff);box-shadow:0 0 14px #00d4ff}
+.inner{width:100%;height:100%;border-radius:50%;background:#010a15;border:2px solid #010a15;display:flex;align-items:center;justify-content:center;overflow:hidden}
+.tabs{display:flex;margin:10px 14px;background:#051a30;border-radius:999px;padding:4px;border:1px solid #00d4ff30}
+.tab{flex:1;text-align:center;padding:10px;border-radius:999px;font-size:13px;font-weight:600;cursor:pointer;color:#6b9bb5}
+.tab.active{background:linear-gradient(90deg,#00d4ff,#00aaff);color:#00111f;box-shadow:0 0 15px #00d4ff}
+.inp{width:100%;background:#081e38;border:1px solid #00d4ff40;border-radius:14px;padding:12px 14px;color:#fff;outline:none}
+.btn{border:none;padding:11px 18px;border-radius:999px;font-weight:800;cursor:pointer;background:linear-gradient(90deg,#00d4ff,#0088ff);color:#00111f;box-shadow:0 0 18px #00d4ff}
+.btn-ghost{background:rgba(0,212,255,0.1);border:1px solid #00d4ff40;color:#00d4ff}
+.ai-dot{width:8px;height:8px;background:#00ff88;border-radius:50%;box-shadow:0 0 8px #00ff88;display:inline-block;animation:float 1s infinite}
+.chip{padding:6px 12px;border-radius:999px;border:1px solid #00d4ff40;background:rgba(0,212,255,0.08);font-size:11px;color:#8bb4cc;display:inline-flex;gap:6px;align-items:center}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:linear-gradient(180deg,#010a15,#001a33);border-top:1px solid #00d4ff40;display:flex;justify-content:space-around;padding:10px 0 18px;z-index:100}
+.nav{color:#4a7a99;text-align:center;font-size:10px;display:flex;flex-direction:column;align-items:center;gap:2px}
 .nav.active{color:#00d4ff;text-shadow:0 0 8px #00d4ff}
-.nav .plus{width:56px;height:56px;border-radius:50%;background:radial-gradient(circle,#00d4ff,#0088ff);display:flex;align-items:center;justify-content:center;color:#00111f;font-size:28px;box-shadow:0 0 25px #00d4ff, inset 0 0 10px #ffffff80;margin-top:-20px}
-.monetize{margin:12px 16px;border:1px dashed #00d4ff80;border-radius:16px;padding:12px;text-align:center;background:#051a30;color:#00d4ff;font-size:12px;box-shadow:0 0 10px #00d4ff20}
-</style>
-</head>
-<body>
+.plus{width:56px;height:56px;border-radius:50%;background:radial-gradient(circle,#00d4ff,#0077ff);display:flex;align-items:center;justify-content:center;color:#00111f;font-size:32px;box-shadow:0 0 25px #00d4ff;margin-top:-22px;border:2px solid #fff2}
+.modal{position:fixed;inset:0;background:rgba(0,0,0,0.85);display:none;align-items:flex-end;justify-content:center;z-index:300;padding:0}
+.sheet{background:#0a1f3a;border-top:2px solid #00d4ff;border-radius:24px 24px 0 0;padding:18px;width:100%;max-width:500px;max-height:88vh;overflow:auto;box-shadow:0 -10px 40px #00d4ff40}
+.opt{border:1px solid #00d4ff30;border-radius:14px;padding:13px;margin:8px 0;display:flex;justify-content:space-between;align-items:center;background:rgba(255,255,255,0.03)}
+</style></head><body>
+
 <div class="top">
-<div class="logo-wrap"><div class="v-circle">V</div><div class="brand">VERTEX <small>CONNECT • SHARE • GROW</small></div></div>
-<div style="display:flex;gap:14px;color:#00d4ff"><i class="material-icons">search</i><i class="material-icons">chat_bubble_outline</i><i class="material-icons">notifications_none</i></div>
+<div style="display:flex;gap:10px;align-items:center"><div class="v">V</div><div><div style="font-family:Orbitron;color:#00d4ff;letter-spacing:3px;font-weight:800">VERTEX</div><div id="country" style="font-size:10px;color:#8bb4cc;display:flex;gap:6px;align-items:center"><span class="ai-dot"></span> Detecting 🇧🇼...</div></div></div>
+<div style="display:flex;gap:10px;color:#00d4ff;align-items:center"><span id="live" style="font-size:11px;background:rgba(0,212,255,0.15);border:1px solid #00d4ff50;padding:4px 8px;border-radius:999px">● 1.2k live</span><i class="material-icons">search</i></div>
 </div>
 
 <div class="hero">
-<div class="v-big">V</div>
-<div><div style="font-family:'Orbitron';font-weight:800;font-size:18px;letter-spacing:1px">VERTEX</div><div style="font-size:12px;color:#8bb4cc">By Brilliant mere <span style="color:#00d4ff">✔</span><br>Ideas • People • Endless Possibilities</div></div>
-<div style="margin-left:auto;width:90px;height:90px;border-radius:50%;background:radial-gradient(circle,#00d4ff30,#0000);filter
+<div class="v" style="width:70px;height:70px;font-size:28px">V</div>
+<div style="flex:1"><div style="font-family:Orbitron;font-weight:800;font-size:18px">VERTEX</div><div style="font-size:11px;color:#8bb4cc">By Brilliant mere ✔ • <span style="color:#00d4ff" id="cName">Botswana</span><br>Ideas • People • Endless Possibilities</div><div style="margin-top:6px;display:flex;gap:6px"><span class="chip">🔥 Trending #1 BW</span><span class="chip">✨ AI Powered</span></div></div>
+<div style="text-align:center"><div style="font-size:22px;font-weight:800;color:#00d4ff">9.8k</div><div style="font-size:9px;color:#6b9bb5">VORTEXIANS</div></div>
+</div>
+
+<div class="stories" id="stories"></div>
+
+<!-- AI COMPOSER 100K -->
+<div class="card">
+<div style="display:flex;gap:10px;align-items:center"><div class="v" style="width:38px;height:38px;font-size:14px">V</div><input id="txt" class="inp" placeholder="What is moving through your mind? AI will help ✨"></div>
+<div style="display:flex;gap:8px;margin-top:10px;flex-wrap:wrap">
+<button class="chip" onclick="aiIdea()">🤖 AI Idea</button><button class="chip" onclick="aiEnhance()">✨ Enhance</button><button class="chip" onclick="aiHashtag()">#️⃣ Hashtags</button><button class="chip" onclick="aiTranslate()">🌍 Translate</button><button class="chip" onclick="addPoll()">📊 Poll</button><button class="chip" onclick="aiMood()">😊 Mood</button>
+</div>
+<div style="display:flex;justify-content:space-between;align-items:center;margin-top:12px">
+<div style="display:flex;gap:14px;font-size:12px;color:#8bb4cc"><span>🖼 Media</span><span>🎥 Live</span><span onclick="openSheet('pay')" style="color:#ffd700">👑 Premium</span><span onclick="openSheet('earn')" style="color:#00ff88">💰 Earn</span></div>
+<button class="btn" onclick="post()">✈ Share thought</button>
+</div>
+<div id="pollArea" style="display:none;margin-top:10px"><input id="pollQ" class="inp" placeholder="Poll question?"><div style="display:flex;gap:8px;margin-top:6px"><input class="inp" id="pollA" placeholder="Option A"><input class="inp" id="pollB" placeholder="Option B"></div></div>
+</div>
+
+<div class="tabs"><div class="tab active" onclick="switchTab(this,'foryou')">For you • AI</div><div class="tab" onclick="switchTab(this,'following')">Following</div><div class="tab" onclick="switchTab(this,'trending')">🔥 Trending</div><div class="tab" onclick="switchTab(this,'live')">● LIVE</div></div>
+
+<div style="margin:10px 14px;display:flex;gap:8px;overflow-x:auto">
+<span class="chip">💡 AI Picks for you</span><span class="chip">🇧🇼 Gabs Today</span><span class="chip">💼 Business</span><span class="chip">🎓 Students</span><span class="chip">🎵 Music BW</span>
+</div>
+
+<div style="margin:8px 14px;border:1px dashed #00d4ff70;border-radius:14px;padding:10px;text-align:center;color:#00d4ff;font-size:11px;display:flex;justify-content:space-between"><span>💰 AD • Gabs Biz P500/mo → You earn P10k/mo</span><span onclick="openSheet('pay')" style="color:#ffd700">Upgrade 👑</span></div>
+
+<div id="feed"></div>
+
+<!-- FLOAT AI ASSISTANT -->
+<div style="position:fixed;bottom:90px;right:14px;z-index:90;display:flex;flex-direction:column;gap:8px">
+<div class="v" style="width:52px;height:52px;background:radial-gradient(circle,#00d4ff,#7a00ff);border-color:#fff" onclick="openSheet('ai')">🤖</div>
+</div>
+
+<div class="bottom">
+<div class="nav active"><i class="material-icons">home</i>Home</div><div class="nav"><i class="material-icons">explore</i>Discover</div><div class="nav"><div class="plus">+</div></div><div class="nav"><i class="material-icons">notifications_none</i>Alerts<br><span style="background:#ff0044;color:#fff;padding:1px 5px;border-radius:999px;font-size:8px">9+</span></div><div class="nav"><i class="material-icons">person_outline</i>Profile</div>
+</div>
+
+<!-- SHEETS -->
+<div class="modal" id="sheetPay" onclick="if(event.target==this)closeSheets()"><div class="sheet"><h3 style="font-family:Orbitron;color:#00d4ff;text-align:center">VORTEX Premium 👑</h3><p id="price" style="text-align:center;color:#8bb4cc;margin:10px 0">Loading...</p>
+<div class="opt" onclick="pay('card')"><span>💳 Card Visa/Master • Auto worldwide</span><b>›</b></div>
+<div class="opt" onclick="pay('orange')"><span>📱 Orange Money • *145#</span><b>›</b></div>
+<div class="opt" onclick="pay('myzaka')"><span>📲 MyZaka / Smega</span><b>›</b></div>
+<div class="opt" onclick="pay('paypal')"><span>🌍 PayPal • International</span><b>›</b></div>
+<div style="margin-top:10px"><b style="color:#ffd700">Premium benefits:</b><br><small style="color:#8bb4cc">✓ Gold name + glow<br>✓ No ads<br>✓ AI unlimited<br>✓ See who viewed<br>✓ P50k monthly giveaway entry<br>✓ Verified badge</small></div>
+<button class="btn" style="width:100%;margin-top:12px;background:#051a30;color:#8bb4cc;border:1px solid #00d4ff40" onclick="closeSheets()">Close</button></div></div>
+
+<div class="modal" id="sheetAi" onclick="if(event.target==this)closeSheets()"><div class="sheet"><h3 style="font-family:Orbitron;color:#00d4ff">VORTEX AI 🤖</h3><div style="margin-top:10px;display:flex;flex-direction:column;gap:8px">
+<div class="card" style="margin:0">Hi! I'm Vortex AI. I can:<br>• Write your posts<br>• Translate to Setswana<br>• Find trending ideas in Gabs<br>• Auto reply to comments</div>
+<input id="aiQ" class="inp" placeholder="Ask AI anything... e.g. Write post about business in Gabs">
+<button class="btn" style="margin-top:8px" onclick="askAi()">Ask AI ✨</button><div id="aiAns" style="margin-top:10px;color:#cce6f5;font-size:13px"></div>
+</div><button class="btn" style="width:100%;margin-top:12px;background:#051a30;color:#8bb4cc;border:1px solid #00d4ff40" onclick="closeSheets()">Close</button></div></div>
+
+<div class="modal" id="sheetEarn" onclick="if(event.target==this)closeSheets()"><div class="sheet"><h3 style="font-family:Orbitron;color:#00ff88">Earn with Vortex 💰</h3><div style="margin-top:10px;color:#8bb4cc;font-size:13px">
+1. <b>Ads:</b> Businesses pay P500/mo to appear - you keep 100%<br>
+2. <b>Premium:</b> You get 70% of P19 per user<br>
+3. <b>Tips:</b> Users tip you with coins<br>
+4. <b>Marketplace:</b> Sell in Gabs<br><br>
+<div class="card" style="margin:0;text-align:center"><div style="font-size:24px;font-weight:800;color:#00ff88">P12,450</div><div style="font-size:11px">Estimated this month if 100 users</div></div>
+</div><button class="btn" style="width:100%;margin-top:12px" onclick="closeSheets()">Start Earning</button></div></div>
+
+<script>
+let cData={name:'Botswana',flag:'🇧🇼',price:'P19/mo',code:'BW',currency:'BWP'};
+async function detect(){try{let r=await fetch('https://ipapi.co/json/');let d=await r.json();let f=d.country_code?String.fromCodePoint(...[...d.country_code].map(c=>127397+c.charCodeAt(0))):'🇧🇼';cData={name:d.country_name||'Botswana',flag:f,price:d.country_code==='BW'?'P19.00 / month':'$1.99 / month',code:d.country_code,currency:d.currency};document.getElementById('country').innerHTML=`<span class="ai-dot"></span> ${f} ${cData.name} • ${cData.code} • ${cData.currency} • AI ON`;document.getElementById('cName').innerText=cData.name;document.getElementById('price').innerHTML=`${f} ${cData.name}<br><b style="color:#00d4ff;font-size:20px">${cData.price}</b><br><small style="color:#8bb4cc">Card + Orange + MyZaka + PayPal</small>`;}catch{document.getElementById('country').innerHTML='<span class="ai-dot"></span> 🇧🇼 Botswana • BW • BWP • AI ON';}}detect();
+
+let storiesData=[{n:'Your story',self:true},{n:'Nova Khan',img:5},{n:'Elio Martin',img:8},{n:'Maya Rai',img:9},{n:'Teto BW',img:12},{n:'Neo Gabs',img:15}];
+document.getElementById('stories').innerHTML=storiesData.map(s=>`<div style="min-width:68px;text-align:center"><div class="ring"><div class="inner">${s.self?'<span style="color:#00d4ff;font-family:Orbitron">V</span>':`<img src="https://i.pravatar.cc/100?img=${s.img}" style="width:100%">`}</div></div><div style="font-size:10px;color:#8bb4cc;margin-top:4px">${s.n}</div></div>`).join('');
+
+function openSheet(t){closeSheets();document.getElementById('sheet'+t.charAt(0).toUpperCase()+t.slice(1)).style.display='flex';}
+function closeSheets(){document.querySelectorAll('.modal').forEach(m=>m.style.display='none');}
+function switchTab(el,type){el.parentElement.querySelectorAll('.tab').forEach(t=>t.classList.remove('active'));el.classList.add('active');render(type);}
+function pay(m){alert(m.toUpperCase()+' Payment: '+cData.price+' for '+cData.name+'\n\nREAL STEP: Create free account on flutterwave.com, get link, I will insert it. Money goes to your bank!');closeSheets();}
+
+function aiIdea(){let ideas=['🔥 Post idea: "How I made P500 today in Gabs with Vortex?"','💡 "3 business ideas that work in Botswana right now"','🇧🇼 "What makes Gabs different from Jozi?"','💼 "Day in life of Botswana entrepreneur"'];document.getElementById('txt').value=ideas[Math.floor(Math.random()*ideas.length)];}
+function aiEnhance(){let t=document.getElementById('txt');if(!t.value)return alert('Type first');t.value='✨ '+t.value+' ✨\n\n#Botswana #Gabs #Vortex #MadeInBW 🚀';}
+function aiHashtag(){let t=document.getElementById('txt');t.value+=(t.value?' ':'')+'#Botswana #Gaborone #BWBusiness #VortexNeon #AIBW';}
+function aiTranslate(){let t=document.getElementById('txt');if(!t.value)return; t.value+='\n\n(🇧🇼 Setswana: '+t.value+' → Dumela, ke idea e ntle!)';}
+function aiMood(){let moods=['😊 Happy','🔥 Motivated','💡 Inspired','🇧🇼 Proud BW'];let m=moods[Math.floor(Math.random()*moods.length)];document.getElementById('txt').value=m+' - '+document.getElementById('txt').value;}
+function addPoll(){document.getElementById('pollArea').style.display=document.getElementById('pollArea').style.display=='none'?'block':'none';}
+function askAi(){let q=document.getElementById('aiQ').value;if(!q)return;document.getElementById('aiAns').innerHTML='🤖 Thinking...';setTimeout(()=>{document.getElementById('aiAns').innerHTML='🤖 AI: Here is a viral post for you:<br><br>"'+q+' - This is how we do it in Gabs! 🇧🇼💙 Who else is building? #Vortex"<br><br><button class="btn" onclick="document.getElementById(\'txt\').value=document.getElementById(\'aiAns\').innerText;closeSheets()">Use this post</button>';},800);}
+
+let posts=JSON.parse(localStorage.getItem('vx_100k')||'[]');
+function render(type='foryou'){
+ let base=[{name:'Brilliant mere',verified:true,text:'My app is not yet good - but now with AI & NEON 100K 🔥',likes:12,comments:3,ai:true},{name:'Nova Khan',verified:true,text:'This neon glow is FIRE 🔥🇧🇼 Made in Gabs! Card payments working?',likes:124,comments:18,img:5},{name:'Vortex AI',verified:true,text:'🤖 Trending in Botswana: Business ideas + Music + Gabs vibes. Ask me anything!',likes:89,comments:12,ai:true}];
+ let all=[...posts,...base];
+ if(type=='trending') all.sort((a,b)=>b.likes-a.likes);
+ document.getElementById('feed').innerHTML=all.map((p,i)=>`<div class="card"><div style="display:flex;justify-content:space-between"><div style="display:flex;gap:10px;align-items:center"><div class="v" style="width:38px;height:38px;font-size:12px">${p.name[0]}</div><div><div style="font-weight:700;font-size:13px">${p.name} ${p.verified?'<span style="color:#00d4ff">✔</span>':''} ${p.ai?'<span style="background:linear-gradient(90deg,#00d4ff,#7a00ff);padding:2px 6px;border-radius:999px;font-size:9px">AI</span>':''}</div><div style="font-size:10px;color:#6b9bb5">just now • ${cData.flag} ${cData.code} • 🌍 Public</div></div></div><i class="material-icons" style="color:#4a7a99">more_horiz</i></div><div style="margin-top:10px;font-size:14px;line-height:1.4">${p.text}</div>${p.img?`<img src="https://picsum.photos/seed/${i}/400/200" style="width:100%;border-radius:14px;margin-top:10px;border:1px solid #00d4ff30">`:''}<div style="display:flex;gap:16px;margin-top:12px;color:#6b9bb5;font-size:13px;align-items:center"><span onclick="this.innerText='💙 '+(parseInt(this.innerText.match(/\\d+/)||0)+1)+' likes'" style="cursor:pointer">💙 ${p.likes} likes</span><span>💬 ${p.comments||0}</span><span>↗ Share</span><span style="margin-left:auto">🔖</span><span>🎁 Tip</span></div></div>`).join('');
+}
+function post(){let t=document.getElementById('txt');if(!t.value.trim())return;let q=document.getElementById('pollQ').value;let poll=q?` 📊 Poll: ${q} (A:${document.getElementById('pollA').value} B:${document.getElementById('pollB').value})`:'';posts.unshift({name:'Brilliant mere',verified:true,text:t.value+poll,likes:0,comments:0,ai:true});localStorage.setItem('vx_100k',JSON.stringify(posts));t.value='';document.getElementById('pollArea').style.display='none';render();}
+
+setInterval(()=>{let n=Math.floor(1000+Math.random()*400);document.getElementById('live').innerText='● '+n+' live';},3000);
+render();
+</script></body></html>
