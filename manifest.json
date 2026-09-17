@@ -1,15 +1,17 @@
 {
-  "name": "VORTEX - Connect. Create. Discover.",
+  "name": "VORTEX - 2M Social",
   "short_name": "VORTEX",
-  "description": "VORTEX by Brilliant t mere",
-  "start_url": "/vortex-social-app/",
+  "description": "2M Social App Created by BRILLIANT T MERE - Gaborone BW",
+  "start_url": "./",
   "display": "standalone",
-  "background_color": "#070a12",
-  "theme_color": "#00d9ff",
-  "icons": [{
-    "src": "https://cdn-icons-png.flaticon.com/512/4712/4712109.png",
-    "sizes": "512x512",
-    "type": "image/png",
-    "purpose": "any maskable"
-  }]
+  "background_color": "#0f0f12",
+  "theme_color": "#6C5CE7",
+  "icons": [
+    {
+      "src": "https://cdn-icons-png.flaticon.com/512/3670/3670226.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any maskable"
+    }
+  ]
 }
