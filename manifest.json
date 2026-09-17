@@ -1,20 +1,21 @@
 {
   "name": "VORTEX 100K MEGA NEON",
   "short_name": "VORTEX",
+  "description": "Botswana's 100K MEGA NEON Social - Built in Gabs",
   "start_url": "./",
   "display": "standalone",
-  "background_color": "#000000",
-  "theme_color": "#ff00ff",
-  "description": "Botswana's 100K MEGA NEON Social - Built in Gabs",
+  "background_color": "#010a15",
+  "theme_color": "#00d4ff",
+  "orientation": "portrait",
   "icons": [
     {
-      "src": "https://cdn-icons-png.flaticon.com/512/5968/5968756.png",
+      "src": "https://raw.githubusercontent.com/tumelobrilliant48-glitch/vortex-social-app/main/icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "https://cdn-icons-png.flaticon.com/512/5968/5968756.png",
+      "src": "https://raw.githubusercontent.com/tumelobrilliant48-glitch/vortex-social-app/main/icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
