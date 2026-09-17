@@ -1,25 +1,22 @@
-# VORTEX 🌪️ - 2M Social
+# 🌪️ VORTEX - 2M Social
 
-**CREATED BY BRILLIANT T MERE**
-**Built in Gaborone, Botswana - 2026**
+**Built 100% on a phone in Gaborone, Botswana 🇧🇼**
+**Created by BRILLIANT T MERE | 2026**
 
-The next-gen social app from Botswana to the world.
+### Live App
+🔗 https://tumelobrilliant48-glitch.github.io/vortex-social-app/
 
-## Features
-- Real-time social feed
-- Post, Like, Comment, Share
-- Offline ready (PWA)
-- Built for 2M community
+### What is VORTEX?
+VORTEX is Botswana's next-gen social network. Made for Gabs, by Gabs.
 
-## Live App
-https://tumelobrilliant48-glitch.github.io/vortex-social-app/
+### Features v3.0
+- ✅ Full social feed
+- ✅ Post, Like, Comment, Share
+- ✅ Bottom navigation with icons
+- ✅ Local storage - posts stay
+- ✅ PWA - Install as real app
+- ✅ Built for mobile-first
 
-## Tech
-- PWA + Service Worker
-- Ready for Google Play Store
-
-## Developer
-BRILLIANT T MERE - 2M Social Founder
-Gaborone, BW
-
-© 2026 VORTEX - All Rights Reserved
+### How to Install (Android)
+1. Open live link in Chrome
+2. Tap 3 dots 
