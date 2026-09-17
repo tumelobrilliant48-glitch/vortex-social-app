@@ -6,16 +6,15 @@
   "display": "standalone",
   "background_color": "#010a15",
   "theme_color": "#00d4ff",
-  "orientation": "portrait",
   "icons": [
     {
-      "src": "https://raw.githubusercontent.com/tumelobrilliant48-glitch/vortex-social-app/main/icon-192.png",
+      "src": "./icon-192.png",
       "sizes": "192x192",
       "type": "image/png",
       "purpose": "any maskable"
     },
     {
-      "src": "https://raw.githubusercontent.com/tumelobrilliant48-glitch/vortex-social-app/main/icon-512.png",
+      "src": "./icon-512.png",
       "sizes": "512x512",
       "type": "image/png",
       "purpose": "any maskable"
