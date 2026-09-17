@@ -1,22 +1,118 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-<title>VORTEX</title>
-<meta name="viewport" content="width=device-width,initial-scale=1">
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>VORTEX - Connect. Create. Discover.</title>
+<link rel="manifest" href="manifest.json">
+<meta name="theme-color" content="#00d9ff">
 <style>
-body{background:#0a0a0a;color:#fff;font-family:Arial;text-align:center;padding:20px}
-h1{color:#00ff88;font-size:50px;margin-top:80px}
-.box{background:#1e1e1e;padding:30px;border-radius:20px;max-width:360px;margin:30px auto;border:1px solid #333}
-button{background:#00ff88;color:#000;border:0;padding:18px 30px;border-radius:12px;font-weight:bold;font-size:18px;width:100%}
+*{margin:0;padding:0;box-sizing:border-box}
+body{background:#070a12;color:#fff;font-family:Inter,system-ui,sans-serif;overflow-x:hidden}
+:root{--cyan:#00d9ff;--bg:#070a12;--card:#111526;--border:#1e2640}
+.top{position:sticky;top:0;z-index:99;background:rgba(7,10,18,.9);backdrop-filter:blur(20px);border-bottom:1px solid var(--border);padding:14px 16px;display:flex;justify-content:space-between;align-items:center}
+.logo{font-weight:900;font-size:22px;letter-spacing:1px}
+.logo span{color:var(--cyan);text-shadow:0 0 15px var(--cyan)}
+.badge{font-size:10px;background:linear-gradient(90deg,#00d9ff,#7c3aed);padding:4px 8px;border-radius:20px;font-weight:700}
+.stories{display:flex;gap:12px;padding:16px;overflow-x:auto;scrollbar-width:none}
+.story{min-width:66px;text-align:center}
+.ring{width:62px;height:62px;border-radius:50%;padding:2.5px;background:linear-gradient(135deg,#00d9ff,#7c3aed,#ff006a)}
+.ring div{width:100%;height:100%;border-radius:50%;background:var(--card);display:flex;align-items:center;justify-content:center;font-size:22px;border:2px solid var(--bg)}
+.story p{font-size:11px;margin-top:6px;opacity:.8}
+.composer{margin:0 16px 16px;background:var(--card);border:1px solid var(--border);border-radius:18px;padding:14px}
+.composer textarea{width:100%;background:#0a0e1f;border:1px solid var(--border);border-radius:12px;padding:12px;color:#fff;resize:none;outline:none}
+.composer textarea:focus{border-color:var(--cyan)}
+.actions{display:flex;justify-content:space-between;align-items:center;margin-top:12px}
+.btn{background:linear-gradient(90deg,#00d9ff,#7c3aed);border:none;color:#fff;padding:9px 18px;border-radius:20px;font-weight:800;cursor:pointer}
+.feed{padding:0 16px 100px;display:flex;flex-direction:column;gap:14px}
+.post{background:var(--card);border:1px solid var(--border);border-radius:18px;overflow:hidden}
+.p-head{display:flex;gap:10px;padding:14px;align-items:center}
+.avatar{width:40px;height:40px;border-radius:50%;background:linear-gradient(135deg,#00d9ff,#7c3aed);display:flex;align-items:center;justify-content:center;font-weight:900}
+.p-info b{font-size:14px}
+.p-info span{font-size:11px;opacity:.6;display:block}
+.p-text{padding:0 14px 12px;font-size:14px;line-height:1.5}
+.p-img{width:100%;height:220px;background:linear-gradient(135deg,#0f172a,#1e1b4b);display:flex;align-items:center;justify-content:center;font-size:48px}
+.p-foot{display:flex;justify-content:space-around;padding:10px;border-top:1px solid var(--border)}
+.p-foot button{background:none;border:none;color:#8b93a7;display:flex;gap:6px;align-items:center;cursor:pointer;font-size:13px}
+.p-foot button.liked{color:#ff006a}
+.bottom{position:fixed;bottom:0;left:0;right:0;background:rgba(7,10,18,.95);backdrop-filter:blur(20px);border-top:1px solid var(--border);display:flex;justify-content:space-around;padding:10px 0}
+.bottom button{background:none;border:none;color:#8b93a7;font-size:20px}
+.bottom button.active{color:var(--cyan)}
+.creator{text-align:center;padding:10px;font-size:11px;opacity:.5;letter-spacing:.5px}
 </style>
 </head>
 <body>
-<h1>🌪️ VORTEX</h1>
-<p>Connect. Share. Vibe.</p>
-<div class="box">
-<h2>Welcome Tumelo!</h2>
-<p>Your app is LIVE from Gaborone</p>
-<button onclick="alert('VORTEX Activated 🚀')">Enter App</button>
+<div class="top">
+<div class="logo">VOR<span>TEX</span></div>
+<div class="badge">by Brilliant t mere</div>
 </div>
+
+<div class="stories">
+<div class="story"><div class="ring"><div>🔥</div></div><p>Trending</p></div>
+<div class="story"><div class="ring"><div>✨</div></div><p>Brilliant</p></div>
+<div class="story"><div class="ring"><div>🚀</div></div><p>Launch</p></div>
+<div class="story"><div class="ring"><div>💎</div></div><p>VIP</p></div>
+<div class="story"><div class="ring"><div>🌍</div></div><p>Global</p></div>
+</div>
+
+<div class="composer">
+<textarea id="txt" rows="3" placeholder="What's happening in the Vortex?"></textarea>
+<div class="actions">
+<span style="font-size:13px;opacity:.6">Connect. Create. Discover.</span>
+<button class="btn" onclick="createPost()">POST</button>
+</div>
+</div>
+
+<div class="feed" id="feed"></div>
+<div class="creator">VORTEX — Created by Brilliant t mere © 2026</div>
+
+<div class="bottom">
+<button class="active">🏠</button>
+<button>🔍</button>
+<button>➕</button>
+<button>💬</button>
+<button>👤</button>
+</div>
+
+<script>
+const feed=document.getElementById('feed');
+let posts=[
+{text:"Welcome to VORTEX! 🌪️ The future of social is here. No limits, pure energy. Built by Brilliant t mere for the next generation. #VORTEX",emoji:"🌪️",user:"Brilliant t mere",time:"now"},
+{text:"Just discovered VORTEX — this UI is insane! Feels like TikTok + X + Discord in one. Who else is here?",emoji:"🚀",user:"Nova_X",time:"2m"},
+{text:"POV: You joined VORTEX early and become legendary. Early adopters = forever icons.",emoji:"💎",user:"VortexFam",time:"5m"},
+];
+function render(){
+feed.innerHTML='';
+posts.forEach((p,i)=>{
+feed.innerHTML+=`
+<div class="post">
+<div class="p-head"><div class="avatar">${p.user[0]}</div><div class="p-info"><b>${p.user}</b><span>${p.time} • Gaborone, BW</span></div></div>
+<div class="p-text">${p.text}</div>
+<div class="p-img">${p.emoji}</div>
+<div class="p-foot">
+<button onclick="like(this)">❤️ <span>128</span></button>
+<button>💬 32</button>
+<button>↗️ Share</button>
+<button>🔖 Save</button>
+</div>
+</div>`;
+});
+}
+function createPost(){
+const t=document.getElementById('txt').value.trim();
+if(!t)return;
+posts.unshift({text:t,emoji:"⚡",user:"You",time:"now"});
+document.getElementById('txt').value='';
+render();
+}
+function like(btn){
+btn.classList.toggle('liked');
+let s=btn.querySelector('span');
+let n=parseInt(s.innerText);
+s.innerText=btn.classList.contains('liked')?n+1:n-1;
+}
+render();
+if('serviceWorker' in navigator){navigator.serviceWorker.register('sw.js')}
+</script>
 </body>
 </html>
